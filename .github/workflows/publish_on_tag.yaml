@@ -35,6 +35,7 @@ jobs:
     outputs:
       agent-pypi-version: ${{ steps.extract-metadata.outputs.version }}
       agent-pypi-package-name: ${{ steps.extract-metadata.outputs.name }}
+    if: github.repository == 'omnivector-solutions/jobbergate' # prevent running on forks
     steps:
       - uses: actions/checkout@v3
 
