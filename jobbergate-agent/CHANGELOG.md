@@ -4,6 +4,8 @@ This file keeps track of all notable changes to jobbergate-agent
 
 ## Unreleased
 
+
+## 6.0.0a0 -- 2024-12-18
 ## 5.4.0 -- 2024-11-18
 
 - Changed auto-update task to reuse current scheduler instead of creating a new one
