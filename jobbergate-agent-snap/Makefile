@@ -26,8 +26,8 @@ changes:
 
 .PHONY: sync-version
 sync-version:
-	@new_version=$$(poetry version -s --directory ../jobbergate-agent) && \
-	sed -i '' "s/\\(- jobbergate-agent==\\).*/\\1$${new_version}/" snap/snapcraft.yaml && \
+	@new_version=$$(poetry version --short --directory ../jobbergate-agent) && \
+	perl -pi -e "s/(- jobbergate-agent==).*/\1'$${new_version}'/" snap/snapcraft.yaml && \
 	echo "Version updated to $${new_version} in snap/snapcraft.yaml"
 
 .PHONY: clean
